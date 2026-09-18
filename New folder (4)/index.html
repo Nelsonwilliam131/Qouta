@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qouta — Words That Last</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("Uc0pHcIsqn0qcRRFa");</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">Qouta</a>
+    <ul class="nav-links">
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO / QUOTE SECTION -->
+  <section class="hero" id="quotes">
+    <div class="watermark-quote">&#10077;</div>
+
+    <div class="quote-grid">
+
+      <!-- Left: Quote Card -->
+      <div class="quote-card" id="quoteCard">
+
+        <!-- Skeleton -->
+        <div class="skeleton-block" id="skeletonBlock">
+          <div class="skel skel-line long"></div>
+          <div class="skel skel-line long"></div>
+          <div class="skel skel-line medium"></div>
+          <div class="skel skel-line short"></div>
+          <div class="skel skel-name"></div>
+        </div>
+
+        <!-- Real content -->
+        <div class="quote-content" id="quoteContent">
+          <p class="quote-open">&#10077;</p>
+          <p class="quote-text" id="quoteText"></p>
+          <div class="quote-meta">
+            <span class="quote-dash">—</span>
+            <span class="quote-author" id="quoteAuthor"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Speaker Image -->
+      <div class="speaker-card" id="speakerCard">
+
+        <!-- Skeleton -->
+        <div class="skeleton-block" id="skeletonImg">
+          <div class="skel skel-avatar"></div>
+          <div class="skel skel-line medium" style="margin: 12px auto 0;"></div>
+        </div>
+
+        <!-- Real content -->
+        <div class="speaker-content" id="speakerContent">
+          <div class="speaker-img-wrap">
+            <img src="" alt="" id="speakerImg" class="speaker-img" />
+            <div class="speaker-img-fallback" id="speakerFallback">
+              <span id="speakerInitial"></span>
+            </div>
+          </div>
+          <p class="speaker-label" id="speakerLabel"></p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="quote-controls">
+      <button class="ctrl-btn" id="prevBtn" aria-label="Previous quote">&#8592; Prev</button>
+      <button class="ctrl-btn primary" id="newBtn" aria-label="New random quote">New Quote</button>
+      <button class="ctrl-btn" id="nextBtn" aria-label="Next quote">Next &#8594;</button>
+    </div>
+
+    <!-- Timer bar -->
+    <div class="timer-bar-wrap" title="Next quote in 5 minutes">
+      <div class="timer-bar" id="timerBar"></div>
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2 class="section-heading">About</h2>
+      <p class="about-text">
+        Qouta is a quotes discovery space built by <strong>Nelson Erharhine</strong> — a programmer who believes that the right words,
+        from the right people, at the right moment, can genuinely shift something in you. This site pulls real quotes
+        from history's sharpest minds: philosophers, scientists, artists, leaders, and rebels. No fillers, no fluff.
+        Just words that have lasted — and the people who meant them.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="contact-sub">Have a quote you love? A suggestion? A thought? Send it over.</p>
+      <div class="contact-grid">
+        <div class="contact-field">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" placeholder="Your name" />
+        </div>
+        <div class="contact-field">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" placeholder="your@email.com" />
+        </div>
+        <div class="contact-field full">
+          <label for="contactMsg">Message</label>
+          <textarea id="contactMsg" rows="5" placeholder="What's on your mind?"></textarea>
+        </div>
+        <div class="contact-field full">
+          <button class="send-btn" id="sendBtn">
+            <span id="sendBtnText">Send Message</span>
+          </button>
+          <p class="contact-feedback" id="contactFeedback"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <!-- Icons — left -->
+      <div class="social-links">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2349131572555" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+
+        <!-- Discord -->
+        <a href="https://discord.gg/7x9AGR6cG" class="social-icon" aria-label="Discord" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- Tagline — center -->
+      <p class="footer-tagline">Nelson Erharhine &nbsp;·&nbsp; Even one kind word can save a life</p>
+
+      <!-- Logo — right -->
+      <span class="footer-logo">Qouta</span>
+
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
