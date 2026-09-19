@@ -562,7 +562,7 @@ const CURATED = [
    //social personals 
 
    { content:
-      "Go and work, nobody is going to save you."
+      "Go and work, nobody is going to save you.",
       author: "Gehgeh"},
 
   // ANIME — DRAGON BALL
