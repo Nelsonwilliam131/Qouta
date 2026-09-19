@@ -564,6 +564,8 @@ const CURATED = [
    { content:
       "Go and work, nobody is going to save you.",
       author: "Gehgeh"},
+   { content: "At this stage of your life focus on building your capabilities",
+    author: "Gehgeh"},
 
   // ANIME — DRAGON BALL
   {
