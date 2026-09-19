@@ -559,6 +559,12 @@ const CURATED = [
     author: "Roy Mustang (Fullmetal Alchemist)",
   },
 
+   //social personals 
+
+   { content:
+      "Go and work, nobody is going to save you."
+      author: "Gehgeh"
+
   // ANIME — DRAGON BALL
   {
     content:
