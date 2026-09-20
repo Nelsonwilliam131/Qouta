@@ -163,7 +163,7 @@ const CURATED = [
    {content: "How you see me nor really concern me, na how I see myself na important for life", author: "GehGeh(Nigerian influncer"},
    {content: "How long you live nor really matter, now how well you take leave am na matter", author: "GehGeh(Nigerian influncer)"},
     //Game characters
-    {content:"The right man in the wrong place can make all the difference in the world", author: "G-man(Half-life 2)",},
+    {content:"The right man in the wrong place can make all the difference in the world", author: "G-man(Half-life 2)"},
     
       
 ];
