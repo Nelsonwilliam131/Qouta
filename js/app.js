@@ -157,6 +157,13 @@ const CURATED = [
   { content: "It's not the net worth of your life that's important. It is the way you live it.", author: "Lelouch vi Britannia (Code Geass)" },
   { content: "You can't win a game by doing nothing. And if someone else is making the moves, you'll always be one step behind.", author: "Lelouch vi Britannia (Code Geass)" },
   { content: "Don't give up! There's no shame in falling down. The true shame is to not stand up again!", author: "Shintaro Midorima (Kuroko's Basketball)" },
+  //social media influnencers
+   {content: " At this stage of your life,  focus on building you capability", author: "GehGeh (Nigerian influencer"},
+   {content: "Stop playing with your time, make good use of your time well", author: "GehGeh (Nigerian influencer"},
+   {content: "How you see me nor really concern me, na how I see myself na important for life", author: "GehGeh(Nigerian influncer"),
+    {content: "How long you live nor really matter, now how well you take leave am na matter", author: "GehGeh(Nigerian influncer)"),
+    
+      
 ];
 
 let pool = [], seen = [], history = [], histPos = -1, autoTimer = null, isBusy = false;
