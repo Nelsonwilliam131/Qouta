@@ -180,6 +180,38 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
 }
 
+/* ── COPY & SHARE BUTTONS ─────────────────────────────────── */
+.quote-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.action-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.action-btn.copied {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
 /* ── SPEAKER CARD ────────────────────────────────────────── */
 .speaker-card {
   background: var(--surface);
