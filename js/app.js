@@ -559,14 +559,6 @@ const CURATED = [
     author: "Roy Mustang (Fullmetal Alchemist)",
   },
 
-   //social personals 
-
-   { content:
-      "Go and work, nobody is going to save you.",
-      author: "Gehgeh"},
-   { content: "At this stage of your life focus on building your capabilities",
-    author: "Gehgeh"},
-
   // ANIME — DRAGON BALL
   {
     content:
@@ -930,7 +922,66 @@ function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-/* ── CONTACT FORM — EmailJS ───────────────────────────────── */
+/* ── COPY & SHARE ─────────────────────────────────────────── */
+const copyBtn = document.getElementById("copyBtn");
+const copyBtnText = document.getElementById("copyBtnText");
+const shareBtn = document.getElementById("shareBtn");
+
+copyBtn.addEventListener("click", async () => {
+  const text = quoteText.textContent;
+  const author = quoteAuthor.textContent;
+  if (!text) return;
+
+  try {
+    await navigator.clipboard.writeText(`"${text}" — ${author}`);
+    copyBtnText.textContent = "Copied!";
+    copyBtn.classList.add("copied");
+    setTimeout(() => {
+      copyBtnText.textContent = "Copy";
+      copyBtn.classList.remove("copied");
+    }, 2000);
+  } catch {
+    copyBtnText.textContent = "Failed";
+    setTimeout(() => {
+      copyBtnText.textContent = "Copy";
+    }, 2000);
+  }
+});
+
+shareBtn.addEventListener("click", async () => {
+  const text = quoteText.textContent;
+  const author = quoteAuthor.textContent;
+  if (!text) return;
+
+  const shareData = {
+    title: "Qouta — Words That Last",
+    text: `"${text}" — ${author}`,
+    url: window.location.href,
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      // User cancelled share — do nothing
+      if (err.name !== "AbortError") console.error("Share failed:", err);
+    }
+  } else {
+    // Fallback — copy to clipboard
+    try {
+      await navigator.clipboard.writeText(
+        `"${text}" — ${author}\n${window.location.href}`,
+      );
+      shareBtn.textContent = "Link copied!";
+      setTimeout(() => {
+        shareBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg> Share`;
+      }, 2000);
+    } catch {
+      /* silently fail */
+    }
+  }
+});
+
 const sendBtn = document.getElementById("sendBtn");
 const sendBtnText = document.getElementById("sendBtnText");
 const contactFeedback = document.getElementById("contactFeedback");
@@ -1011,3 +1062,4 @@ newBtn.addEventListener("click", showNext);
   await showNext();
   startAutoTimer();
 })();
+
