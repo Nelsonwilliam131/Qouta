@@ -52,6 +52,9 @@ const CURATED = [
       "Nearly all men can stand adversity, but if you want to test a man's character, give him power.",
     author: "Abraham Lincoln",
   },
+   {
+      content: "A diaster might or might not kill you, princess. But being terrified of it will definately finish you",
+      author: "jonathan king (Book: god of malice)"},
   {
     content:
       "Success is not final, failure is not fatal: it is the courage to continue that counts.",
