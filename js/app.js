@@ -20,6 +20,41 @@ const CURATED = [
       "Ask not what your country can do for you — ask what you can do for your country.",
     author: "John F. Kennedy",
   },
+
+       {
+      content: "Do not fear the unknown. If anything, fear the known",
+         author: "Deepak Chopra"
+   },
+
+       {
+      content: "Rock bottom was the best foundation On which to rebuild my life",
+         author: "Jk Rowling"
+   },
+
+       {
+      content: "Don't fear that your life will end. Fear it might never begin",
+         author: "Henry David Thorean"
+   },
+
+          {
+      content: "Wake up to reality, nothing goes as planned in this accursed world The longer you live the more you will realize that the only things that truly matter  that exist in this reality merely pain suffering and futility",
+         author: "Madara Uchina"
+   },
+      {
+      content: "Do one thing everyday that scares you",
+         author: "Eleanor Roosevelt"
+   },
+   
+    {
+      content: "All that is necessary for the trumph of evil is that good people do nothing",
+         author: "Edmund Burke"
+   },
+   
+   {
+      content: "Happiness in intelligent people is rarest thing I know",
+         author: "Ernest Hemingway"
+   },
+   
   {
     content:
       "Change will not come if we wait for some other person or some other time.",
